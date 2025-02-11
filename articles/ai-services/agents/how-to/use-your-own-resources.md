@@ -73,10 +73,10 @@ Use an existing AI Services or Azure OpenAI resource:
     ```az login``` 
 2. Then run the command:
 
-    ```az search service show --resource-group  <your-resource-group> --name <your-storage-account>  --query "id" --output tsv```
-    
+    ```az storage account show --resource-group <your-resource-group> --name <your-storage-account> --query "id" --output tsv```
+   
      The output is the `aiStorageAccountResourceID` you need to use in the template.
-3. In the standard agent template file, replace the following placeholders:
+4. In the standard agent template file, replace the following placeholders:
     
     ```
     aiStorageAccountResourceId:/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}
